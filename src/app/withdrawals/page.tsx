@@ -97,7 +97,7 @@ export default function WithdrawalsPage() {
                     <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
                         <thead>
                             <tr style={{ background: "#f9fafb" }}>
-                                {["Withdrawal ID", "User", "Amount (₹)", "Status", "Notification", "Remark", "Created", "Updated", "Actions"].map((h) => (
+                                {["Withdrawal ID", "User", "Amount (USD)", "Status", "Notification", "Remark", "Created", "Updated", "Actions"].map((h) => (
                                     <th key={h} style={{ padding: "12px 16px", textAlign: "left", fontWeight: 600, color: "var(--text-muted)", borderBottom: "1px solid var(--border)", whiteSpace: "nowrap" }}>{h}</th>
                                 ))}
                             </tr>
@@ -118,7 +118,7 @@ export default function WithdrawalsPage() {
                                         <div style={{ fontWeight: 500 }}>{w.username}</div>
                                         <div style={{ fontSize: 11, color: "var(--text-muted)", fontFamily: "monospace" }}>{w.user_id}</div>
                                     </td>
-                                    <td style={{ padding: "12px 16px", fontWeight: 700, color: "#e8002d" }}>₹{w.amount.toLocaleString()}</td>
+                                    <td style={{ padding: "12px 16px", fontWeight: 700, color: "#e8002d" }}>${w.amount.toLocaleString()}</td>
                                     <td style={{ padding: "12px 16px" }}><StatusBadge status={w.status} /></td>
                                     <td style={{ padding: "12px 16px" }}>
                                         {w.status === "pending" ? (
@@ -176,7 +176,7 @@ export default function WithdrawalsPage() {
 
             {/* Reject Modal */}
             {rejectModal && (
-                <Modal title={`Reject Withdrawal — ₹${rejectModal.amount.toLocaleString()}`} onClose={() => { setRejectModal(null); setRemark(""); }}>
+                <Modal title={`Reject Withdrawal — $${rejectModal.amount.toLocaleString()}`} onClose={() => { setRejectModal(null); setRemark(""); }}>
                     <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 14 }}>User: <strong>{rejectModal.username}</strong></p>
                     <form onSubmit={handleReject} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                         <div>

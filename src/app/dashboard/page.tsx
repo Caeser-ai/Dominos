@@ -60,9 +60,9 @@ export default function DashboardPage() {
 
             {/* KPI Cards */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 16, marginBottom: 32 }}>
-                <KpiCard label="Total Balance" value={kpis.totalBalance} prefix="₹" icon={DollarSign} color="#e8002d" />
-                <KpiCard label="Total Deposits" value={kpis.totalDeposits} prefix="₹" icon={TrendingUp} color="#16a34a" />
-                <KpiCard label="Total Withdrawals" value={kpis.totalWithdrawals} prefix="₹" icon={TrendingDown} color="#2563eb" />
+                <KpiCard label="Total Balance" value={kpis.totalBalance} prefix="$" icon={DollarSign} color="#e8002d" />
+                <KpiCard label="Total Deposits" value={kpis.totalDeposits} prefix="$" icon={TrendingUp} color="#16a34a" />
+                <KpiCard label="Total Withdrawals" value={kpis.totalWithdrawals} prefix="$" icon={TrendingDown} color="#2563eb" />
                 <KpiCard label="Total Users" value={kpis.totalUsers} icon={Users} color="#7c3aed" />
                 <KpiCard label="Active Users" value={kpis.activeUsers} icon={UserCheck} color="#d97706" />
                 <KpiCard label="Pending Withdrawals" value={kpis.pendingWithdrawals} icon={Clock} color="#e8002d" />

@@ -84,7 +84,7 @@ export default function UsersPage() {
                     <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
                         <thead>
                             <tr style={{ background: "#f9fafb" }}>
-                                {["User ID", "Username", "Balance (₹)", "Deposits (₹)", "Withdrawals (₹)", "Created"].map((h) => (
+                                {["User ID", "Username", "Balance (USD)", "Deposits (USD)", "Withdrawals (USD)", "Created"].map((h) => (
                                     <th key={h} style={{ padding: "12px 16px", textAlign: "left", fontWeight: 600, color: "var(--text-muted)", borderBottom: "1px solid var(--border)", whiteSpace: "nowrap" }}>{h}</th>
                                 ))}
                             </tr>

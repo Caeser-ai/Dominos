@@ -72,7 +72,7 @@ export default function TransactionsPage() {
                     <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
                         <thead>
                             <tr style={{ background: "#f9fafb" }}>
-                                {["Txn ID", "User", "Type", "Amount (₹)", "Fee (₹)", "Total Deducted (₹)", "Status", "Date"].map((h) => (
+                                {["Txn ID", "User", "Type", "Amount (USD)", "Fee (USD)", "Total Deducted (USD)", "Status", "Date"].map((h) => (
                                     <th key={h} style={{ padding: "12px 16px", textAlign: "left", fontWeight: 600, color: "var(--text-muted)", borderBottom: "1px solid var(--border)", whiteSpace: "nowrap" }}>{h}</th>
                                 ))}
                             </tr>
@@ -93,9 +93,9 @@ export default function TransactionsPage() {
                                         <div style={{ fontSize: 11, color: "var(--text-muted)", fontFamily: "monospace" }}>{t.user_id}</div>
                                     </td>
                                     <td style={{ padding: "12px 16px" }}><TypeBadge type={t.type} /></td>
-                                    <td style={{ padding: "12px 16px", fontWeight: 600 }}>₹{t.amount.toLocaleString()}</td>
-                                    <td style={{ padding: "12px 16px", color: "var(--text-muted)" }}>₹{t.fee.toLocaleString()}</td>
-                                    <td style={{ padding: "12px 16px", fontWeight: 600 }}>₹{t.total_deducted.toLocaleString()}</td>
+                                    <td style={{ padding: "12px 16px", fontWeight: 600 }}>${t.amount.toLocaleString()}</td>
+                                    <td style={{ padding: "12px 16px", color: "var(--text-muted)" }}>${t.fee.toLocaleString()}</td>
+                                    <td style={{ padding: "12px 16px", fontWeight: 600 }}>${t.total_deducted.toLocaleString()}</td>
                                     <td style={{ padding: "12px 16px" }}><StatusBadge status={t.status} /></td>
                                     <td style={{ padding: "12px 16px", color: "var(--text-muted)", fontSize: 12 }}>{new Date(t.created_at).toLocaleString()}</td>
                                 </tr>
